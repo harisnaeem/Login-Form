@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<!-- META -->
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+
+	<title>Admin Login</title>
+
+	<!-- GOOGLE FONTS -->
+	<link href="https://fonts.googleapis.com/css?family=Poppins:600,700|Source+Sans+Pro:300,400,600,700&amp;subset=latin-ext" rel="stylesheet">
+	<!-- STYLE -->
+	<link rel="stylesheet" href="https://necolas.github.io/normalize.css/7.0.0/normalize.css">
+	<link rel="stylesheet" href="css/login.css">
+</head>
+<body>
+
+<h1 class="is-visuallyhidden">Admin Login</h1>
+
+<div class="section-background"></div>
+
+<div class="container">
+
+	<a class="logo" href="javascript:void(0)" tabindex="-1">
+		<img src="img/logo.png" title="Logo" alt="Image of company logo">
+		<span class="is-visuallyhidden">Logo</span>
+	</a>
+	
+	<form id="loginForm" class="form" onsubmit="return false">
+		
+		<label class="label is-visuallyhidden" for="website" aria-hidden="true">Website:</label>
+		<input id="website" class="field is-visuallyhidden js-data-field" type="text" name="website" placeholder="Enter website" tabindex="-1" autocomplete="off" aria-hidden="true">
+		
+		<label class="label" for="username">Username:</label>
+		<input id="username" class="field js-data-field" type="text" name="username" placeholder="Enter username">
+		<span class="error-msg is-visuallyhidden"></span>
+
+		<label class="label" for="password">Password:</label>
+		<input id="password" class="field js-data-field" type="password" name="password" placeholder="Enter password">
+		<span class="error-msg is-visuallyhidden">Error: Password not found</span>
+
+		<input id="submit" class="button" type="submit" name="submit" value="Login">
+
+	</form>
+
+</div>
+
+<!-- SCRIPTS -->
+<script src="js/login.js"></script>
+
+</body>
+</html>

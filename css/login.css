@@ -1,0 +1,234 @@
+* {
+	margin: 0;
+	padding: 0;
+	border: 0;
+	box-sizing: border-box;
+}
+
+body {
+	position: relative;
+	width: 100%;
+	height: 100%;
+	min-height: 100vh;
+	color: #3b3b3b;
+	font-family: "Source Sans Pro", sans-serif;
+	font-size: 16px;
+	overflow: hidden;
+}
+
+.section-background {
+	position: absolute;
+	top: 0;
+	left: 0;
+	bottom: 0;
+	width: 100%;
+	background: linear-gradient( rgba(255, 255, 255, 0.8), rgba(255, 255, 255, 0.8)), url(../img/login_bg.jpg);
+	background-position: center;
+	background-repeat: no-repeat;
+	background-size: cover;
+	z-index: -1;
+}
+
+.container {
+	position: absolute;
+	top: 50%;
+	left: 50%;
+	padding: 16px;
+	transform: translate(-50%, -50%);
+}
+
+.container:after {
+	content: ' ';
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 50%;
+    width: 100%;
+    max-width: 200px;
+    background: url(../img/black-twill.png) top left;
+    z-index: -1;
+    transform: translateX(-50%);
+}
+
+.logo {
+	display: block;
+	width: 80px;
+	margin: 0 auto 40px;
+	outline: none;
+}
+
+.logo > img {
+	width: 100%;
+}
+
+/* Form */
+
+.form {
+	position: relative;
+}
+
+.label, .field {
+	display: block;
+	width: 100%;
+	margin: 16px auto;
+}
+
+.label {
+	font-family: 'Poppins', sans-serif;
+	font-size: 24px;
+	text-align: center;
+}
+
+.field {
+	min-width: 288px;
+	margin-bottom: 32px;
+	padding: 16px 24px;	
+	color: #3b3b3b;
+	font-family: "Source Sans Pro", sans-serif;
+	font-size: 16px;
+	border: 1px solid transparent;
+	transition: border-color 0.3s ease-in-out;
+}
+
+.field:focus {
+	outline: none;
+	border-color: #8e8e8e;
+}
+
+.field.-error,
+.field.-error:focus {
+	border: 1px solid red;
+}
+
+.error-msg {
+	position: absolute;
+	width: 100%;
+	margin-top: -24px;
+	color: red;
+	font-size: 14px;
+	text-align: center;
+}
+
+/* Buttons */
+
+.button {
+	display: block;
+	width: 100%;
+	max-width: 240px;
+	margin: 40px auto 0;
+	padding: 24px 32px;
+	background: #ffffff;
+	color: #8e8e8e;
+	font-weight: 600;
+	font-size: 16px;
+	border: 0;
+	outline: none;
+	cursor: pointer;
+	transition: color 0.3s ease-in-out;
+}
+
+.button.-danger {
+	color: #ffffff;
+	background-color: #ec008c;
+	transition: background-color 0.3s ease-in-out;
+}
+
+.button.-danger:hover {
+	color: #ffffff;
+	background-color: #ff1fa5;
+}
+
+.button:active,
+.button:focus,
+.button:hover {
+	color: #3b3b3b;
+}
+
+.button:disabled,
+.button:disabled:active,
+.button:disabled:focus,
+.button:disabled:hover {
+	color: #8e8e8e;
+}
+
+/* Helper classes */
+
+.is-visuallyhidden {
+	border: 0;
+	clip: rect(0 0 0 0);
+	height: 1px;
+	margin: -1px;
+	overflow: hidden;
+	padding: 0;
+	position: absolute;
+	width: 1px;
+}
+
+/* MODAL WARNING */
+
+.modal {
+	position: absolute;
+	top: 0;
+	left: 0;
+	right: 0;
+	bottom: 0;
+	background: rgba(59, 59, 59, 0.4);
+}
+
+.modal > .container {
+	background: #ffffff;
+	padding: 40px 16px;
+}
+
+.modal > .container:after {
+	margin: 16px 0;
+}
+
+.modal > .container > .button {
+	margin-top: 24px;
+	padding: 16px 24px;
+}
+
+.title {
+	display: block;
+	width: 100%;
+	margin: 16px auto;
+	color: #3b3b3b;
+	font-family: 'Poppins', sans-serif;
+	font-size: 40px;
+	text-transform: uppercase;
+	text-align: center;
+}
+
+.message {
+	display: block;
+	margin: 16px auto;
+	padding: 16px;
+	box-sizing: border-box;
+	background: #ffffff;
+	border: 1px solid #8e8e8e;
+	text-align: center;
+}
+
+/* Animtaion */
+
+.-shake_me {
+	-webkit-animation: shake 0.5s ease-out;
+    animation: shake 0.5s ease-out;
+}
+
+@-webkit-keyframes shake {
+	  0% { transform: translateX(-16px); }
+	 25% { transform: translateX(16px); }
+	 50% { transform: translateX(-8px); }
+	 75% { transform: translateX(8px); }
+	100% { transform: translateX(0px); }
+}
+
+@keyframes shake {
+	  0% { transform: translateX(-16px); }
+	 25% { transform: translateX(16px); }
+	 50% { transform: translateX(-8px); }
+	 75% { transform: translateX(8px); }
+	100% { transform: translateX(0px); }
+}
